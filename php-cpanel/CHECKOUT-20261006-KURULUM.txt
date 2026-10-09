@@ -1,0 +1,51 @@
+KAPTAS ODEME EKRANI GUNCELLEMESI - 06.10.2026
+
+Bu paket onceki KAPTAS-VAKIFBANK-TEST-20261005 kurulumunun uzerine uygulanir.
+007 ve 008 veritabani eklemeleri onceden kurulmus olmalidir.
+Bu pakette SQL, ozel config, banka sifresi veya musteri verisi yoktur.
+
+YUKLEME
+1. Mevcut dosya ve veritabani yedegini koruyun.
+2. ZIP'i /home/kap1e2renonline klasorune yukleyin ve ayni yere cikartin.
+3. app ve public_html klasorleri mevcut olanlarla birlesir. Klasorleri silmeyin.
+4. config/config.php, arac fotograflari ve kullanici kayitlari degismez.
+5. Tarayiciyi Ctrl+F5 ile yenileyin. Arac filosundan yeni kiralama baslatin.
+
+DEGISIKLIKLER
+- Kiralama, bilgileriniz ve odeme olmak uzere uc gercek form adimi.
+- Tarihler tarayici dilinden bagimsiz GG.AA.YYYY, saatler 24 saat biciminde.
+- Tarih/saat degisikliginde sunucudan otomatik fiyat hesaplama.
+- Admin gunluk USD fiyati x baslayan 24 saat sayisi x guncel USD/TRY kuru.
+- Sunucu imzali fiyat olmadan odeme yok. Eski tutar tekrar kullanilmaz.
+- Form, fiyat, baglanti ve kapali odeme durumlari acik mesajlarla gosterilir.
+- Masaustu/mobil duzen, duzeltilmis logo ve yerel fontlar.
+- Fiyat onayi doldugunda otomatik yenileme; sozlesmeler tekrar onaylanir.
+- Kart/sifre bilgileri yerel depolamaya veya fiyat istegine yazilmaz.
+
+TEST
+Yonetici hesabiyla giris yapin. Sari VakifBank test uyarisi gorunmeli.
+Gelecek tarihler secin. Gun sayisi ve toplam kendiliginden degismeli.
+Bilgileriniz adimini tamamlayip test kartiyla odemeye devam edin.
+Bu paketin tarayici testleri kontrollu API yanitlariyla yapilmistir;
+gercek banka 3D/Sale/Search zincirinin sunucuda test edilmesi hala gerekir.
+Canli tahsilati bu paket acmaz. Veritabani migration gerekmez.
+
+E-POSTA
+Istenen gonderici: donotreply@kaptasrental.online
+Mevcut SMTP ayari bu pakette degistirilmez.
+Yalniz yonlendirme, SMTP kimlik dogrulamasi saglamaz. Hesap sifreli bir
+posta kutusu olmali ve gonderim yetkisi saglayici tarafindan dogrulanmalidir.
+Turkticaret resmi rehberi: smtp.turkticaret.net, 587, STARTTLS (tls).
+Hesap hazir oldugunda ozel config/config.php icindeki mail bolumunde
+user ve from_address yeni tam adres; password posta kutusunun sifresi
+olur. Sifreyi sohbete veya guncelleme ZIP'ine eklemeyin.
+SMTP kabulunden sonra spam klasoru dahil gercek alici teslimi ve
+SPF/DKIM/DMARC sonuclari kontrol edilmelidir. DNS kayitlarini kopyalayarak
+ikinci SPF olusturmayin; mevcut MX kayitlarini koruyun.
+Rezervasyon, sifre sifirlama ve dogrulama mailleri ortak Mailer'i kullanir.
+Test odemesi gercek musteri rezervasyon e-postasi olusturmaz.
+
+CANLIYA GECMEDEN
+VAKIFBANK-KURULUM.md dosyasindaki iki cron gorevi ve PHP CLI yolu
+hostingde dogrulanmalidir. Sonradan onaylanan odemeler ve e-posta kuyrugu
+cron gerektirir. Banka 3D testinin tamamlanmasi ve SMTP teslimi ayri testlerdir.

@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `PhpMailActivation` (
+    `id` INTEGER NOT NULL PRIMARY KEY,
+    `activatedAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3)
+) ENGINE=InnoDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+INSERT IGNORE INTO `PhpMailActivation` (`id`) VALUES (1);
+
+CREATE TABLE IF NOT EXISTS `PhpReservationMail` (
+    `reservationId` VARCHAR(191) NOT NULL PRIMARY KEY,
+    `paymentIntentId` VARCHAR(191) NOT NULL,
+    `recipient` VARCHAR(254) NOT NULL,
+    `snapshot` LONGTEXT NOT NULL,
+    `status` VARCHAR(20) NOT NULL DEFAULT 'PENDING',
+    `attempts` INTEGER NOT NULL DEFAULT 0,
+    `nextAttemptAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `sentAt` DATETIME(3) NULL,
+    `lastError` VARCHAR(80) NULL,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    INDEX `PhpReservationMail_due_idx` (`status`, `nextAttemptAt`)
+) ENGINE=InnoDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

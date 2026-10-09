@@ -1,0 +1,120 @@
+.contact-page-container {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.contact-form-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+}
+
+.contact-form-header {
+  background-color: var(--primary-color);
+  padding: 20px 24px;
+  color: var(--primary-contrast);
+}
+
+.contact-form-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.contact-form-body {
+  padding: 30px 24px;
+}
+
+.contact-form-subtitle {
+  color: #6a5600;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.contact-form-group {
+  margin-bottom: 16px;
+}
+
+.contact-form-group label {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form-group textarea {
+  min-height: 110px;
+  padding-top: 0.7rem;
+  resize: vertical;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.contact-form-submit {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.contact-consent {
+  display: grid;
+  grid-template-columns: 17px 1fr;
+  align-items: start;
+  gap: 9px;
+  margin: 12px 0;
+  color: #5b5e62;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.contact-consent input {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--primary-color);
+}
+
+.contact-consent a {
+  color: #684f00;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-form-submit button {
+  background-color: var(--primary-color);
+  color: var(--primary-contrast);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-form-submit button:hover {
+  background-color: var(--primary-hover);
+}

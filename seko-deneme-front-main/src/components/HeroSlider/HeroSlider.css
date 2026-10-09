@@ -1,0 +1,100 @@
+.hero-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+.slides-container {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide a {
+  display: block;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Floating Actions */
+.floating-actions {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+  border: 2px solid white;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+.fab-whatsapp {
+  background-color: #25D366;
+}
+
+.fab-phone {
+  background-color: #00a8ff;
+}
+
+/* Rect Indicators */
+.slider-indicators-rect {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.rect-indicator {
+  width: 30px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.rect-indicator.active {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .floating-actions {
+    bottom: 10px;
+    left: 10px;
+  }
+  .fab {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,8 @@
+.main-content,
+.search-section {
+  background-color: #fffdf5;
+}
+
+.search-section.sub-page-search {
+  background-color: var(--primary-soft);
+}

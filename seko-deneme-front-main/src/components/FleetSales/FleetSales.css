@@ -1,0 +1,283 @@
+.fleet-sales-wrapper {
+  background-color: #fff;
+  padding-bottom: 4rem;
+}
+
+.breadcrumb-container {
+  padding-top: 1.5rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.breadcrumb a {
+  color: #555;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .active {
+  color: #222;
+  font-weight: 500;
+}
+
+.sub_page {
+  padding: 2rem 0;
+  background-color: transparent;
+}
+
+.sub_page header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2.5rem;
+}
+
+.contact_page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  .contact_page {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.contact_page_left {
+  flex: 1 1 65%;
+}
+
+.contact_page_left h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.contact_page_left h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact_page_left p {
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.contact_page_left ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact_page_left li {
+  margin-bottom: 0.8rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.contact_page_left li p {
+    margin-bottom: 0;
+}
+
+.contact_page_left hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.decorated-link {
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.decorated-link:hover {
+  text-decoration: underline;
+}
+
+/* Right Side Form */
+.contact_page_right {
+  flex: 1 1 35%;
+}
+
+.form_main {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+  overflow: hidden;
+}
+
+.form_header {
+  background-color: var(--primary-color);
+  padding: 1.2rem 1.5rem;
+}
+
+.form_header strong {
+  font-size: 1.15rem;
+  color: var(--primary-contrast);
+  font-weight: 600;
+}
+
+.form_header p {
+    margin: 0;
+}
+
+.form_content {
+  padding: 1rem;
+}
+
+.form_content h3 {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: #6a5600;
+  font-weight: 500;
+}
+
+.form_group {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_group label {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  order: -1; /* move label above input since html has input before label */
+}
+
+.form_group input,
+.form_group select {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #fff;
+}
+
+.form_group input:focus,
+.form_group select:focus {
+  border-color: var(--primary-color);
+}
+
+.verification_code {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.verification_code .form_group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.verification_code .code {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.verification_code .code img {
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.5;
+}
+
+.send_btn {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.send_btn a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--primary-contrast);
+    padding: 0.6rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.send_btn a:hover {
+    background-color: var(--primary-hover);
+}
+.rental-terms-list {
+  padding: 0 1rem 2rem;
+}
+
+.rental-term-row {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid #e8e8e3;
+}
+
+.rental-term-number {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--primary-color);
+  color: #806300;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.rental-term-row h2 {
+  margin: 0 0 0.45rem;
+  color: #292929;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+
+.rental-term-row p {
+  margin: 0;
+  color: #555;
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
+html[dir='rtl'] .rental-term-row {
+  direction: rtl;
+}
+
+@media (max-width: 560px) {
+  .rental-term-row {
+    grid-template-columns: 36px 1fr;
+    gap: 0.75rem;
+  }
+
+  .rental-term-number {
+    width: 32px;
+    height: 32px;
+  }
+}

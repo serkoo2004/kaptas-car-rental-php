@@ -1,0 +1,38 @@
+Options -Indexes
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    RewriteRule ^api(?:/.*)?$ api/index.php [QSA,L]
+    RewriteRule ^admin(?:/.*)?$ admin/index.php [QSA,L]
+    RewriteRule ^satin-al(?:/.*)?$ checkout/index.php [QSA,L]
+
+    RewriteRule ^forgot-password/?$ password-reset/index.php [QSA,L]
+    RewriteRule ^(?:arac-filosu|hakkimizda|iletisim|kiralama-kosullari|kvkk-aydinlatma-metni|gizlilik-politikasi|cerez-politikasi|teslimat-ve-iade-sartlari|on-bilgilendirme-formu|mesafeli-satis-sozlesmesi|kvkk-basvuru)/?$ index.html [L]
+    RewriteRule ^$ index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+    AddType font/ttf .ttf
+    AddType application/vnd.ms-fontobject .eot
+    AddType image/svg+xml .svg
+</IfModule>
+
+<FilesMatch "(^\.|config\.php$|composer\.(json|lock)$|\.sql$|\.log$)">
+    Require all denied
+</FilesMatch>

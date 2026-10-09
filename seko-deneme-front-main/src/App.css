@@ -1,0 +1,47 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  position: relative;
+  background-color: #fffdf5;
+}
+
+.search-section {
+  background-color: #fffdf5;
+  width: 100%;
+}
+
+.sub-page-search {
+  background-color: var(--primary-soft);
+}
+
+.sub-page-search .search-panel {
+  padding: 1.2rem 0;
+}
+
+.sub-page-search .top-label {
+  color: #5f552c;
+}
+
+.sub-page-search .checkbox-wrapper label {
+  color: #4a442d;
+}
+
+.car-fleet-placeholder {
+  padding: 4rem 1rem;
+  text-align: center;
+  color: var(--text-light);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius-md);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-sm);
+}

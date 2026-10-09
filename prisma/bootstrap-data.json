@@ -1,0 +1,250 @@
+{
+  "vehicles": [
+    {
+      "brand": "Toyota",
+      "brandSlug": "toyota",
+      "model": "Corolla Hybrid",
+      "modelSlug": "corolla-hybrid",
+      "title": "Toyota Corolla Hybrid Flame X-Pack",
+      "slug": "toyota-corolla-hybrid-flame-x-pack",
+      "year": 2026,
+      "fuelType": "HYBRID",
+      "transmission": "AUTOMATIC",
+      "bodyType": "Sedan",
+      "segment": "C Segment",
+      "enginePower": "140 HP",
+      "batteryRange": null,
+      "consumption": "4.5 lt / 100 km",
+      "monthlyPriceFrom": 36900,
+      "deliveryStatus": "IN_STOCK",
+      "stockCount": 18,
+      "isFeatured": true,
+      "imageUrl": "/images/fleet-hero.png",
+      "imageAlt": "Toyota Corolla Hybrid kurumsal filo araci",
+      "features": [
+        ["Motor", "1.8 Hybrid", "Teknik"],
+        ["Vites", "Otomatik e-CVT", "Teknik"],
+        ["Yakıt", "Hybrid", "Operasyon"],
+        ["Teslim", "Stoktan teslim", "Operasyon"]
+      ],
+      "packages": [
+        { "name": "Operasyon Plus", "durationMonths": 24, "annualKm": 20000, "monthlyPrice": 38900 },
+        { "name": "Kurumsal 36", "durationMonths": 36, "annualKm": 20000, "monthlyPrice": 36900 },
+        { "name": "Yuksek KM", "durationMonths": 36, "annualKm": 30000, "monthlyPrice": 41900 }
+      ]
+    },
+    {
+      "brand": "Renault",
+      "brandSlug": "renault",
+      "model": "Megane Sedan",
+      "modelSlug": "megane-sedan",
+      "title": "Renault Megane Sedan Icon",
+      "slug": "renault-megane-sedan-icon",
+      "year": 2026,
+      "fuelType": "GASOLINE",
+      "transmission": "AUTOMATIC",
+      "bodyType": "Sedan",
+      "segment": "C Segment",
+      "enginePower": "140 HP",
+      "batteryRange": null,
+      "consumption": "6.1 lt / 100 km",
+      "monthlyPriceFrom": 31900,
+      "deliveryStatus": "LIMITED_STOCK",
+      "stockCount": 9,
+      "isFeatured": true,
+      "imageUrl": "/images/fleet-hero.png",
+      "imageAlt": "Renault Megane Sedan filo kiralama",
+      "features": [
+        ["Motor", "1.3 TCe", "Teknik"],
+        ["Vites", "EDC otomatik", "Teknik"],
+        ["Segment", "C sedan", "Operasyon"],
+        ["Teslim", "Sinirli stok", "Operasyon"]
+      ],
+      "packages": [
+        { "name": "KOBI 24", "durationMonths": 24, "annualKm": 15000, "monthlyPrice": 33900 },
+        { "name": "Kurumsal 36", "durationMonths": 36, "annualKm": 20000, "monthlyPrice": 31900 },
+        { "name": "Filo 48", "durationMonths": 48, "annualKm": 20000, "monthlyPrice": 30900 }
+      ]
+    },
+    {
+      "brand": "Ford",
+      "brandSlug": "ford",
+      "model": "Transit Custom",
+      "modelSlug": "transit-custom",
+      "title": "Ford Transit Custom Trend",
+      "slug": "ford-transit-custom-trend",
+      "year": 2026,
+      "fuelType": "DIESEL",
+      "transmission": "MANUAL",
+      "bodyType": "Van",
+      "segment": "Hafif Ticari",
+      "enginePower": "136 HP",
+      "batteryRange": null,
+      "consumption": "7.4 lt / 100 km",
+      "monthlyPriceFrom": 42900,
+      "deliveryStatus": "IN_STOCK",
+      "stockCount": 12,
+      "isFeatured": false,
+      "imageUrl": "/images/fleet-hero.png",
+      "imageAlt": "Ford Transit Custom ticari filo araci",
+      "features": [
+        ["Kasa", "Kisa sase van", "Teknik"],
+        ["Yuk hacmi", "5.8 m3", "Teknik"],
+        ["Yakıt", "Dizel", "Operasyon"],
+        ["Kullanim", "Saha ve servis ekibi", "Operasyon"]
+      ],
+      "packages": [
+        { "name": "Saha 24", "durationMonths": 24, "annualKm": 30000, "monthlyPrice": 44900 },
+        { "name": "Operasyon 36", "durationMonths": 36, "annualKm": 30000, "monthlyPrice": 42900 }
+      ]
+    },
+    {
+      "brand": "Hyundai",
+      "brandSlug": "hyundai",
+      "model": "Tucson",
+      "modelSlug": "tucson",
+      "title": "Hyundai Tucson Prime",
+      "slug": "hyundai-tucson-prime",
+      "year": 2026,
+      "fuelType": "GASOLINE",
+      "transmission": "AUTOMATIC",
+      "bodyType": "SUV",
+      "segment": "C SUV",
+      "enginePower": "180 HP",
+      "batteryRange": null,
+      "consumption": "7.2 lt / 100 km",
+      "monthlyPriceFrom": 52900,
+      "deliveryStatus": "ORDER_ONLY",
+      "stockCount": 0,
+      "isFeatured": false,
+      "imageUrl": "/images/fleet-hero.png",
+      "imageAlt": "Hyundai Tucson yonetici araci",
+      "features": [
+        ["Gövde", "SUV", "Teknik"],
+        ["Vites", "Otomatik", "Teknik"],
+        ["Kullanim", "Yonetici ve bolge ekipleri", "Operasyon"],
+        ["Teslim", "Siparis ile", "Operasyon"]
+      ],
+      "packages": [
+        { "name": "Yonetici 36", "durationMonths": 36, "annualKm": 20000, "monthlyPrice": 52900 },
+        { "name": "Yonetici Plus", "durationMonths": 36, "annualKm": 30000, "monthlyPrice": 57900 }
+      ]
+    },
+    {
+      "brand": "Tesla",
+      "brandSlug": "tesla",
+      "model": "Model Y",
+      "modelSlug": "model-y",
+      "title": "Tesla Model Y Long Range",
+      "slug": "tesla-model-y-long-range",
+      "year": 2026,
+      "fuelType": "ELECTRIC",
+      "transmission": "AUTOMATIC",
+      "bodyType": "SUV",
+      "segment": "Elektrikli SUV",
+      "enginePower": "Dual Motor",
+      "batteryRange": "533 km WLTP",
+      "consumption": "16.9 kWh / 100 km",
+      "monthlyPriceFrom": 68900,
+      "deliveryStatus": "SOON",
+      "stockCount": 4,
+      "isFeatured": true,
+      "imageUrl": "/images/fleet-hero.png",
+      "imageAlt": "Tesla Model Y elektrikli filo araci",
+      "features": [
+        ["Menzil", "533 km WLTP", "Teknik"],
+        ["Sarj", "DC hizli sarj uyumlu", "Teknik"],
+        ["Yakıt", "Elektrik", "Operasyon"],
+        ["Kullanim", "Elektrikli filo gecisi", "Operasyon"]
+      ],
+      "packages": [
+        { "name": "EV 36", "durationMonths": 36, "annualKm": 20000, "monthlyPrice": 68900 },
+        { "name": "EV Yuksek KM", "durationMonths": 36, "annualKm": 30000, "monthlyPrice": 73900 }
+      ]
+    },
+    {
+      "brand": "Fiat",
+      "brandSlug": "fiat",
+      "model": "Egea Cross",
+      "modelSlug": "egea-cross",
+      "title": "Fiat Egea Cross Urban",
+      "slug": "fiat-egea-cross-urban",
+      "year": 2026,
+      "fuelType": "DIESEL",
+      "transmission": "AUTOMATIC",
+      "bodyType": "Cross",
+      "segment": "B-Crossover",
+      "enginePower": "130 HP",
+      "batteryRange": null,
+      "consumption": "5.2 lt / 100 km",
+      "monthlyPriceFrom": 29900,
+      "deliveryStatus": "IN_STOCK",
+      "stockCount": 24,
+      "isFeatured": false,
+      "imageUrl": "/images/fleet-hero.png",
+      "imageAlt": "Fiat Egea Cross saha filo araci",
+      "features": [
+        ["Motor", "1.6 Multijet", "Teknik"],
+        ["Vites", "Otomatik", "Teknik"],
+        ["Kullanim", "Saha ve satis ekibi", "Operasyon"],
+        ["Teslim", "Stoktan teslim", "Operasyon"]
+      ],
+      "packages": [
+        { "name": "Saha 24", "durationMonths": 24, "annualKm": 20000, "monthlyPrice": 31900 },
+        { "name": "Saha 36", "durationMonths": 36, "annualKm": 20000, "monthlyPrice": 29900 },
+        { "name": "Saha Plus", "durationMonths": 36, "annualKm": 30000, "monthlyPrice": 34900 }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "title": "Uzun Donem Arac Kiralama",
+      "slug": "uzun-donem-arac-kiralama",
+      "excerpt": "Sirket arac ihtiyacini satin alma yuku olmadan, sabit aylik odeme ve hizmet paketiyle planlayin.",
+      "content": "Uzun donem arac kiralama surecinde arac secimi, sozlesme suresi, kilometre paketi, bakim, sigorta ve lastik kapsami birlikte degerlendirilir."
+    },
+    {
+      "title": "Operasyonel Filo Yonetimi",
+      "slug": "operasyonel-filo-yonetimi",
+      "excerpt": "Bakim, hasar, lastik, belge ve teslimat sureclerini tek operasyon akisi icinde yonetin.",
+      "content": "Operasyonel filo yonetimi; arac yasam dongusu, servis sureci, hasar kaydi, belge takibi ve yenileme planlamasini tek merkezde toplar."
+    },
+    {
+      "title": "Elektrikli Filo Donusumu",
+      "slug": "elektrikli-filo-donusumu",
+      "excerpt": "Elektrikli arac secimi, menzil ihtiyaci ve sarj operasyonu icin karar destek yapisi kurun.",
+      "content": "Elektrikli filo donusumu; kullanim profili, menzil, sarj altyapisi ve toplam sahip olma maliyetiyle birlikte planlanir."
+    }
+  ],
+  "blogCategories": [
+    { "name": "Kiralama Rehberi", "slug": "kiralama-rehberi" },
+    { "name": "Filo Operasyonu", "slug": "filo-operasyonu" },
+    { "name": "Elektrikli Filo", "slug": "elektrikli-filo" }
+  ],
+  "blogPosts": [
+    {
+      "categorySlug": "kiralama-rehberi",
+      "title": "Uzun donem kiralama teklifinde hangi kalemler okunmali?",
+      "slug": "uzun-donem-kiralama-teklif-kalemleri",
+      "excerpt": "Aylik bedel tek basina yeterli degildir; sure, kilometre, bakim, lastik ve hasar kapsami birlikte okunmalidir.",
+      "content": "Uzun donem kiralama teklifinde aylik bedelin yaninda sozlesme suresi, yillik kilometre, dahil hizmetler ve operasyonel sorumluluklar birlikte incelenmelidir.",
+      "readingMinutes": 4
+    },
+    {
+      "categorySlug": "filo-operasyonu",
+      "title": "Filo operasyonunda belge onayi neden kritik?",
+      "slug": "filo-operasyonunda-belge-onayi",
+      "excerpt": "Eksik evrak teslimat ve sozlesme surecini uzatir. Belge onay akisi satis ile operasyon arasindaki gecisi hizlandirir.",
+      "content": "Belge onay sistemi, tekliften sozlesmeye geciste sirket evraklarini, revizyonlari ve onay durumlarini kayit altinda tutar.",
+      "readingMinutes": 3
+    },
+    {
+      "categorySlug": "elektrikli-filo",
+      "title": "Elektrikli filo gecisinde menzil tek karar kriteri degildir",
+      "slug": "elektrikli-filo-gecisinde-menzil",
+      "excerpt": "Sarj rutini, arac kullanim profili, operasyon bolgesi ve toplam maliyet birlikte degerlendirilmelidir.",
+      "content": "Elektrikli filo gecisinde menzil kadar sarj altyapisi, kullanim rutini, arac sinifi ve toplam maliyet de karar surecine dahil edilmelidir.",
+      "readingMinutes": 5
+    }
+  ]
+}

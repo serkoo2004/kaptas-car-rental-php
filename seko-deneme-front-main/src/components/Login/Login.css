@@ -1,0 +1,327 @@
+.login-page {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.nav-tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #f1f3f5;
+}
+
+.nav-tabs .nav-item {
+  flex: 1;
+}
+
+.nav-tabs .nav-link {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #e3182d;
+  background: #fafafa;
+}
+
+.nav-tabs .nav-link.active {
+  color: #e3182d;
+}
+
+.nav-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e3182d;
+}
+
+.tab-content {
+  padding: 2.5rem;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form_group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form_group input:not([type="checkbox"]):not([type="radio"]),
+.form_group textarea {
+  width: 100%;
+  padding: 14px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fefefe;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.form_group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Phone input group styles */
+.phone-group {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.phone-code {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.phone-code select {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fefefe;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.phone-code select:focus {
+  border-color: #e3182d;
+}
+
+.phone-input {
+  flex-grow: 1;
+  position: relative;
+}
+
+.phone-input input {
+  width: 100%;
+  padding: 14px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fefefe;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.phone-input label.text {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  color: #888;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.phone-input input:focus ~ label.text,
+.phone-input input:not(:placeholder-shown) ~ label.text {
+  transform: translateY(-22px) scale(0.85);
+  background-color: #fff;
+  padding: 0 5px;
+  color: #e3182d;
+  font-weight: 500;
+  left: 10px;
+}
+
+.phone-input input:focus,
+.phone-input input:not(:placeholder-shown) {
+  border-color: #e3182d;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(227, 24, 45, 0.1);
+}
+
+.form_group label.text {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  color: #888;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.form_group label.date-label {
+  transform: translateY(-22px) scale(0.85);
+  background-color: #fff;
+  padding: 0 5px;
+  color: #e3182d;
+  font-weight: 500;
+  left: 10px;
+}
+
+/* Floating label effect */
+.form_group input:focus,
+.form_group textarea:focus,
+.form_group input:not(:placeholder-shown),
+.form_group textarea:not(:placeholder-shown) {
+  border-color: #e3182d;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(227, 24, 45, 0.1);
+}
+
+.form_group input:focus ~ label.text:not(.date-label),
+.form_group textarea:focus ~ label.text:not(.date-label),
+.form_group input:not(:placeholder-shown) ~ label.text:not(.date-label),
+.form_group textarea:not(:placeholder-shown) ~ label.text:not(.date-label) {
+  transform: translateY(-22px) scale(0.85);
+  background-color: #fff;
+  padding: 0 5px;
+  color: #e3182d;
+  font-weight: 500;
+  left: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #e3182d;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.sign-up-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #e3182d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(227, 24, 45, 0.2);
+}
+
+.sign-up-btn:hover {
+  background-color: #c01324;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(227, 24, 45, 0.3);
+}
+
+.radio-group {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.tc-radio-group {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-item input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #e3182d;
+  cursor: pointer;
+}
+
+.radio-item label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Accordion for forgot password */
+.accordion {
+  margin-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 1.5rem;
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.accordion-button:hover {
+  color: #e3182d;
+}
+
+.accordion-collapse {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .tab-content {
+    padding: 1.5rem;
+  }
+  
+  .login-page {
+    padding: 2rem 1rem;
+  }
+}

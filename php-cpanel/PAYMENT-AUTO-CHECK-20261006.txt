@@ -1,0 +1,59 @@
+KAPTAS - Payment result monitoring / 2026-10-06
+
+DEPLOYMENT
+1. Back up the current app, bin and public_html folders first.
+2. Upload the ZIP into /home/kap1e2renonline, NOT into public_html.
+3. Extract into /home/kap1e2renonline and replace the matching files.
+   Do not delete existing folders. This is an incremental update.
+4. No SQL import, migration, password change or config replacement is needed.
+   The package does NOT contain credentials or config/config.php.
+5. Refresh the payment result page. A new result.js file is loaded.
+
+AUTOMATIC CONFIRMATION
+- The result page reads the authorized payment status immediately and every
+  5 seconds. It never submits another charge or changes a payment status.
+- A verified live bank Sale/Search finalizes PaymentIntent=PAID and
+  Reservation=CONFIRMED together and queues one confirmation email.
+  Admin confirmation is NOT required for a normal successful payment.
+- A successful sandbox payment shows TEST_PAID, not a live booking.
+- Invalid callbacks, uncertain bank results and stock conflicts are NOT
+  silently marked successful. Sandbox callback diagnostic codes are shown
+  on the authorized result page when available.
+- Browser polling pauses in hidden tabs and stops after 5 minutes, offering
+  a read-only retry. Bank reconciliation must also run independently below.
+
+CPANEL CRON JOBS - REQUIRED FOR DELAYED BANK RESULTS / QUEUED EMAIL
+Confirm the hosting's PHP 8.2+ CLI path first. The examples below assume
+/usr/local/bin/php resolves to that version. Do not guess another path.
+Use the full verified binary path in both commands.
+Check whether these jobs already exist; do not create duplicates.
+
+Every minute (* * * * *):
+/usr/local/bin/php /home/kap1e2renonline/bin/reconcile-vakifbank.php >> /home/kap1e2renonline/storage/logs/vakifbank-cron.log 2>&1
+
+Every minute (* * * * *):
+/usr/local/bin/php /home/kap1e2renonline/bin/send-reservation-mails.php >> /home/kap1e2renonline/storage/logs/reservation-mail-cron.log 2>&1
+
+The worker reconciles PROCESSING/REVIEW attempts using bank Search;
+it NEVER resubmits Sale. Its minimum age is 2 minutes. CHALLENGE without
+a valid callback cannot be converted into success by this worker.
+SMTP must already be configured for the email worker.
+Existing ReservationMailQueue/ReservationReceipt/Mailer services and tables
+from the previous reservation email deployment must remain installed.
+
+VERIFICATION
+- Signed result links or the payment owner's session are required.
+  An unrelated visitor must receive 404 from /api/payments/status.
+- Sandbox: complete bank 3D; expect Test basarili, no real reservation/mail.
+- Pending: page polls automatically. Callback errors show a safe code.
+- Expired access: polling stops without exposing payment information.
+- Check cron log timestamps advance and no PHP error is recorded.
+- Live activation remains a separate bank-approved step. Do not switch
+  environments or use a real card just to test this patch.
+
+LOCAL TEST LIMITATIONS
+Browser tests use isolated status fixtures, not a bank or database.
+PHP/database regression tests were NOT re-executed because the local PHP
+runtime was blocked by antivirus. No antivirus exclusion was added.
+Source regression tests: tests/payment-status.php and tests/vakifbank.php.
+Production bank callback success must still be verified on the host.

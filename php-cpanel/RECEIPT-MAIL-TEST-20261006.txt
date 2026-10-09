@@ -1,0 +1,42 @@
+KAPTAS - One-time reservation template email test
+
+Purpose: send the real reservation email template with explicit TEST wording.
+No payment, reservation, stock, customer or mail queue table is read/changed.
+No bank API is called. Current live/test payment settings remain unchanged.
+SMTP comes from the existing private server configuration.
+
+DEPLOY
+Back up app/Services/ReservationReceipt.php first.
+Upload ZIP to /home/kap1e2renonline and extract in that same directory.
+Replace app/Services/ReservationReceipt.php and add bin/test-reservation-mail.php.
+Do NOT extract into public_html. Do NOT change config or import SQL.
+
+SEND TO THE USER-AUTHORIZED ADDRESS
+Create a TEMPORARY cron job (every minute) with this exact command:
+
+/usr/local/bin/ea-php82 /home/kap1e2renonline/bin/test-reservation-mail.php --to=kaptascarrental@gmail.com --run=receipt-20261006-1 >> /home/kap1e2renonline/storage/logs/receipt-mail-test.log 2>&1
+
+Do not edit/remove the existing payment or reservation email worker jobs.
+After 1-2 minutes, check the inbox/spam and storage/logs/receipt-mail-test.log.
+Subject: [TEST] KAPTAS - Rezervasyon e-postasi denemesi
+The example amount and dates are illustrations, not actual pricing or bookings.
+
+Once attempted, REMOVE only this temporary test cron job.
+Each recipient/run pair is claimed before SMTP under a filesystem lock in
+storage/logs, so repeated cron calls do not resend. A repeated call reports
+TEST_ALREADY_ATTEMPTED. This is not an error or evidence of delivery.
+Do not delete the state file or use a new --run value until an uncertain
+send has been checked; that could send another email.
+
+RESULTS
+smtpAccepted=true: SMTP server accepted the message, not proof of inbox delivery.
+Confirm actual inbox delivery, sender, embedded logo, vehicle, dates, duration,
+reference and illustrative amount. No code/card/password needs sharing.
+TEST_SEND_FAILED: delivery failed or is uncertain. There is no automatic retry.
+Share only this test log's safe JSON result, not config or passwords.
+
+LIMITS
+This tests receipt rendering, embedded logo and configured SMTP delivery.
+It does not simulate bank verification, enqueueing, or live booking confirmation.
+PHP runtime tests were not executed locally due to the existing antivirus block.
+No antivirus bypass was attempted. The assistant has not sent an email yet.

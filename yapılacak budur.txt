@@ -1,0 +1,762 @@
+Sen dünya standartlarında çalışan kıdemli bir Product Designer, Senior Frontend Developer, Backend Architect, UX Researcher, Conversion Specialist ve Automotive/Fleet SaaS danışmanısın.
+
+Görevin: Türkiye’de aktif kullanılacak, filo kiralama ve filo yönetimi hizmeti veren, gerçek şirket sitesi gibi duran, AI tarafından yapılmış hissi vermeyen, premium, güvenilir, hızlı, SEO uyumlu, mobil öncelikli, full-stack çalışan bir web platformu tasarlamak ve geliştirmek.
+
+Bu site yalnızca tanıtım sitesi olmayacak. Gerçek kullanıcılar kayıt olacak, giriş yapacak, Google ile giriş yapacak, Apple ile giriş yapacak, araçları inceleyecek, filtreleyecek, teklif alacak, başvuru oluşturacak, sepet/teklif listesi mantığıyla araç ekleyebilecek, admin panelinden araçlar ve başvurular yönetilecek.
+
+MARKA HİSSİ:
+Site AI tasarımı gibi görünmeyecek. Hazır template, aşırı parlak gradient, yapay stok görsel, anlamsız slogan, birbirini tekrar eden kartlar, generic “geleceğin mobilitesi” tarzı boş cümleler kullanma.
+Tasarım gerçek bir ajans ve deneyimli yazılım ekibi tarafından yapılmış gibi olmalı.
+Güven veren, kurumsal, modern, sade, pahalı ama soğuk olmayan bir görünüm istiyorum.
+
+REFERANS ALINACAK SEKTÖR MANTIĞI:
+Türkiye’den Hedef Filo, DRD, Garanti BBVA Filo, Ayvens Türkiye, Avis Filo, Enterprise uzun dönem kiralama, Filomingo gibi yapıların güçlü taraflarını incele.
+Yurt dışından Element Fleet, Holman, Enterprise Fleet Management, Wheels, Arval/Ayvens, SIXT Business/Fleet gibi sitelerin güçlü taraflarını incele.
+Bunları kopyalama. Daha iyisini çıkar.
+Özellikle şu alanları birleştir:
+- Kurumsal güven
+- Araç listeleme deneyimi
+- Hızlı teklif alma
+- Satın alma mı kiralama mı maliyet karşılaştırması
+- Filo yönetim paneli
+- Bakım, lastik, sigorta, hasar, yakıt, HGS/OGS, ceza, muayene takibi
+- Elektrikli araç ve sürdürülebilir filo danışmanlığı
+- KOBİ, kurumsal şirket, bireysel/şahıs şirketi ayrımı
+- Admin yönetimi
+- Kullanıcı paneli
+- SEO blog ve rehber sistemi
+
+TEKNOLOJİ:
+Frontend: Next.js 15, React, TypeScript, Tailwind CSS, shadcn/ui.
+Backend: Next.js API routes veya NestJS.
+Database: PostgreSQL.
+ORM: Prisma.
+Auth: NextAuth/Auth.js.
+Login seçenekleri:
+- Email + şifre
+- Google ile giriş
+- Apple ile giriş
+- Şifre sıfırlama
+- Email doğrulama
+- KVKK/onay kutuları
+Ödeme/satın alma altyapısı:
+- Gerçek ödeme entegrasyonuna hazır mimari kur.
+- Türkiye için iyzico/PayTR entegrasyonuna uygun servis katmanı hazırla.
+- Şimdilik “teklif talebi / ön başvuru / kapora ödeme” akışını destekle.
+Deploy: Vercel + PostgreSQL uyumlu olsun.
+
+SAYFA YAPISI:
+1. Ana Sayfa
+- Güçlü ama abartısız hero alanı.
+- Başlık örneği: “Şirket filonuzu daha az operasyonla, daha net maliyetle yönetin.”
+- Alt metin gerçekçi olsun, AI gibi olmasın.
+- CTA: “Teklif Al”, “Araçları İncele”, “Maliyetini Hesapla”
+- Güven rozetleri: bakım, lastik, sigorta, ikame araç, 7/24 destek, sabit ödeme.
+- Araç arama kutusu: marka, model, yakıt tipi, vites, segment, aylık bütçe, süre.
+- Popüler araçlar.
+- “Satın almak mı kiralamak mı?” hesaplayıcı.
+- Süreç: ihtiyacını belirle → teklif al → sözleşme → teslimat → operasyon yönetimi.
+- Kurumsal referans alanı.
+- SSS.
+- Blog/rehber içerikleri.
+
+2. Araçlar Sayfası
+- Listeleme kartları premium olsun.
+- Filtreler:
+  marka, model, segment, yakıt tipi, elektrikli/hibrit/benzin/dizel, vites, kasa tipi, aylık fiyat aralığı, kilometre paketi, sözleşme süresi, stok durumu.
+- Sıralama:
+  önerilen, en düşük fiyat, en yeni, elektrikli araçlar, ticari araçlar.
+- Her araç kartında:
+  görsel, marka/model, aylık tahmini ödeme, süre, km paketi, yakıt, vites, teslimat durumu, “Teklif Al”, “Karşılaştır”.
+- Skeleton loading, boş sonuç tasarımı, hata ekranı olsun.
+
+3. Araç Detay Sayfası
+- Büyük gerçekçi galeri.
+- Teknik özellikler.
+- Kiralama paketleri:
+  12 ay / 24 ay / 36 ay / 48 ay
+  10.000 / 20.000 / 30.000 km
+- Dahil hizmetler:
+  bakım, lastik, kasko, trafik sigortası, MTV, muayene, yol yardım, hasar yönetimi.
+- Ek hizmetler:
+  ikame araç, yakıt kartı, HGS/OGS, telematik, sürücü güvenliği raporu.
+- Dinamik teklif formu.
+- Benzer araçlar.
+
+4. Teklif Alma Akışı
+Çok adımlı form:
+- Kullanıcı tipi: KOBİ / Kurumsal / Şahıs şirketi / Bireysel
+- Araç ihtiyacı: marka, model, adet, süre, km
+- Firma bilgileri
+- İletişim bilgileri
+- Ek hizmet seçimleri
+- KVKK onayı
+- Son ekran: “Başvurunuz alındı”
+- Admin paneline lead düşsün.
+- Kullanıcı panelinde başvuru durumu gözüksün.
+
+5. Login / Register
+- Modern, sade, güvenli görünüm.
+- Google ile devam et.
+- Apple ile devam et.
+- Email ile kayıt.
+- Şifre gücü göstergesi.
+- KVKK ve ticari ileti onayı.
+- Email doğrulama altyapısı.
+- Kullanıcı rolleri:
+  USER
+  CORPORATE_USER
+  SALES_REP
+  ADMIN
+  SUPER_ADMIN
+
+6. Kullanıcı Paneli
+- Başvurularım
+- Tekliflerim
+- Favori araçlar
+- Karşılaştırmalar
+- Belgelerim
+- Profil
+- Firma bilgileri
+- Bildirimler
+- Eğer aktif filo müşterisiyse:
+  araçlarım, bakım talepleri, hasar bildirimi, lastik değişim, ceza/HGS, sözleşmeler.
+
+ADMIN PANEL — WEB VE MOBİL UYGULAMA MERKEZİ YÖNETİMİ
+
+Admin panel yalnızca web sitesini değil, mobil uygulamayı da yönetecek merkezi kontrol sistemi olacak.
+
+Admin panelden yönetilecek alanlar:
+
+1. Kullanıcı Yönetimi
+- Web kullanıcıları
+- Mobil uygulama kullanıcıları
+- Kurumsal müşteri kullanıcıları
+- Sürücüler
+- Operasyon personeli
+- Satış temsilcileri
+- Adminler
+- Roller ve yetkiler
+- Hesap durumu: aktif / pasif / askıya alındı
+- Son giriş cihazı
+- Son giriş tarihi
+- Kullanıcının hangi cihazlardan giriş yaptığı
+
+2. Mobil Uygulama Yönetimi
+- Mobil uygulama ana sayfa bannerları
+- Mobil kampanya kartları
+- Mobil duyurular
+- Mobil popup bildirimleri
+- Uygulama içi mesajlar
+- Mobil menü sıralaması
+- Öne çıkarılacak araçlar
+- Öne çıkarılacak hizmetler
+- Bakım modu aç/kapat
+- Zorunlu güncelleme ayarı
+- Minimum uygulama versiyonu
+- App Store / Google Play linkleri
+- Mobil uygulama sürüm notları
+
+3. Push Notification Paneli
+Admin panelden push bildirimi gönderilebilecek.
+
+Bildirim hedefleme:
+- Tüm kullanıcılara gönder
+- Sadece kurumsal müşterilere gönder
+- Sadece sürücülere gönder
+- Sadece belirli firmaya gönder
+- Sadece belirli kullanıcıya gönder
+- Sadece teklif bekleyenlere gönder
+- Sadece eksik belgesi olanlara gönder
+- Sadece bakım tarihi yaklaşanlara gönder
+- Sadece iOS kullanıcılarına gönder
+- Sadece Android kullanıcılarına gönder
+
+Bildirim tipleri:
+- Teklif hazırlandı
+- Evrak eksik
+- Yeni kampanya
+- Teslimat planlandı
+- Bakım zamanı geldi
+- Lastik değişim zamanı
+- Sigorta yenileme
+- Muayene hatırlatma
+- Genel duyuru
+
+Bildirim ekranında:
+- Başlık
+- Mesaj
+- Görsel
+- Hedef kitle
+- Gönderim zamanı
+- Hemen gönder / zamanla
+- Tıklanınca açılacak ekran
+- Gönderim istatistikleri
+- Açılma oranı
+- Tıklanma oranı
+
+4. Mobil İçerik Yönetimi
+Admin panelden mobil uygulamada görünen içerikler düzenlenebilecek.
+
+Yönetilecek içerikler:
+- Ana ekran kartları
+- Kampanyalar
+- Hizmet açıklamaları
+- SSS
+- Blog içerikleri
+- Yardım merkezi
+- Onboarding ekranları
+- KVKK metinleri
+- Kullanım şartları
+- Sözleşme metinleri
+
+5. Sürücü ve Araç Teslim Yönetimi
+Admin panelden mobil uygulamadaki teslim süreçleri yönetilecek.
+
+Özellikler:
+- Günlük teslimatlar
+- Günlük iadeler
+- Teslim personeli atama
+- Araç teslim formu şablonları
+- Hasar kontrol listesi
+- Fotoğraf zorunlulukları
+- İmza zorunluluğu
+- GPS konumu zorunluluğu
+- Kilometre bilgisi
+- Yakıt seviyesi
+- Teslim tutanağı PDF
+- İade tutanağı PDF
+- Teslim geçmişi
+- Araç durum geçmişi
+
+6. Mobil Yetki Sistemi
+Mobil uygulamada her kullanıcı aynı şeyleri görmeyecek.
+
+Rollere göre görünüm:
+- Bireysel kullanıcı
+- Kurumsal firma yetkilisi
+- Sürücü
+- Operasyon personeli
+- Satış temsilcisi
+- Yönetici
+
+Admin panelden:
+- Hangi rol hangi ekranı görecek
+- Hangi rol hangi işlemi yapabilecek
+- Hangi rol belge yükleyebilecek
+- Hangi rol hasar bildirimi açabilecek
+- Hangi rol teklif onaylayabilecek
+- Hangi rol teslim tutanağı oluşturabilecek
+
+7. Mobil Form Yönetimi
+Admin panelden mobil uygulamadaki formlar düzenlenebilecek.
+
+Formlar:
+- Teklif formu
+- Hasar bildirimi formu
+- Bakım talebi formu
+- Evrak yükleme formu
+- Araç teslim formu
+- Araç iade formu
+- Şikayet/talep formu
+
+Her formda:
+- Alan ekle/sil
+- Zorunlu alan belirle
+- Dosya yükleme aç/kapat
+- Fotoğraf zorunluluğu
+- İmza zorunluluğu
+- Açıklama alanı
+- Form gönderilince atanacak ekip
+
+8. Mobil Destek ve Talep Merkezi
+Admin panelden mobil uygulamadan gelen talepler yönetilecek.
+
+Talep türleri:
+- Bakım talebi
+- Hasar bildirimi
+- Evrak talebi
+- Fatura talebi
+- Teslimat talebi
+- Teknik destek
+- Genel destek
+
+Panelde:
+- Talep listesi
+- Öncelik durumu
+- Atanan personel
+- Durum takibi
+- Mesaj geçmişi
+- Dosya ekleri
+- Çözüm süresi
+- SLA takibi
+
+9. Mobil Analitik
+Admin panelden mobil uygulama kullanımı takip edilecek.
+
+Metrikler:
+- Günlük aktif kullanıcı
+- Aylık aktif kullanıcı
+- iOS / Android dağılımı
+- En çok kullanılan ekranlar
+- En çok tıklanan araçlar
+- En çok favorilenen araçlar
+- Teklif formu terk oranı
+- Push açılma oranı
+- Uygulama çökme kayıtları
+- Son girişler
+- Kullanıcı yolculuğu
+
+10. Sistem Ayarları
+Admin panelden hem web hem mobil için genel ayarlar yapılacak.
+
+Ayarlar:
+- Site bakım modu
+- Mobil bakım modu
+- Teklif alma açık/kapalı
+- Yeni kayıt açık/kapalı
+- Google login açık/kapalı
+- Apple login açık/kapalı
+- Email login açık/kapalı
+- Dosya yükleme limitleri
+- Destek saatleri
+- İletişim bilgileri
+- WhatsApp numarası
+- Mail şablonları
+- SMS şablonları
+- Push şablonları
+
+11. Admin Panel UX Kuralı
+Admin panel gerçek operasyon ekibi için tasarlanacak.
+
+- Gereksiz tıklama olmayacak.
+- Her önemli işlem 1-2 tıkta yapılacak.
+- Başvuru, teklif, kullanıcı, araç ve mobil bildirimler tek yerden yönetilecek.
+- Dashboard’da bugün yapılacak işler görünecek.
+- Admin bir müşteriye girdiğinde web ve mobil tüm geçmişini görebilecek.
+- Kullanıcının mobilde hangi araçları incelediği, hangi formları yarım bıraktığı, hangi teklifleri açtığı görünecek.
+- Mobil uygulama içerikleri geliştiriciye ihtiyaç olmadan panelden güncellenebilecek.
+- Panel CRM + operasyon + mobil app yönetim sistemi gibi çalışacak.
+- Tasarım masaüstü öncelikli olacak ama tablet uyumlu da olacak.
+
+8. Filo Yönetimi Hizmetleri Sayfası
+Ayrı ayrı profesyonel landing page oluştur:
+- Uzun dönem araç kiralama
+- Operasyonel kiralama
+- Filo yönetimi
+- Elektrikli filo dönüşümü
+- Ticari araç kiralama
+- KOBİ filo çözümleri
+- Kurumsal filo çözümleri
+- Bakım ve onarım yönetimi
+- Hasar ve sigorta yönetimi
+- Lastik yönetimi
+- Yakıt ve HGS yönetimi
+- Telematik ve sürüş verisi
+
+9. Maliyet Hesaplayıcı
+Satın alma vs kiralama karşılaştırması:
+- Araç bedeli
+- Peşinat
+- Kredi maliyeti
+- MTV
+- Sigorta
+- Kasko
+- Bakım
+- Lastik
+- Değer kaybı
+- Operasyon zamanı
+- Kiralama aylık bedeli
+Sonuç ekranı:
+- Toplam maliyet
+- Aylık ortalama maliyet
+- Nakit akışı avantajı
+- Operasyonel yük farkı
+Bu alan satışa dönüştürecek şekilde tasarlansın.
+
+10. Blog / SEO
+SEO odaklı içerik sistemi kur.
+Örnek kategoriler:
+- Filo kiralama rehberi
+- Operasyonel kiralama
+- Elektrikli araçlar
+- Vergi ve muhasebe
+- Bakım/hasar/lastik
+- Şirket araçları
+Her blog sayfasında:
+- Okuma süresi
+- İçindekiler
+- İlgili araç önerileri
+- Teklif CTA
+- FAQ schema
+
+TASARIM DİLİ:
+- Renkler: koyu lacivert, kırık beyaz, açık gri, metalik detaylar, güven veren yeşil veya mavi vurgu.
+- Tipografi: modern, okunaklı, kurumsal.
+- Fazla animasyon kullanma.
+- Mikro animasyonlar kaliteli olsun.
+- Kartlar yuvarlatılmış ama oyuncak gibi değil.
+- Bol boşluk kullan.
+- Mobil görünüm kusursuz olsun.
+- Gerçek filo şirketi ciddiyeti taşısın.
+- Formlar çok iyi tasarlansın çünkü asıl dönüşüm orada.
+
+İÇERİK TONU:
+Türkçe olacak.
+Samimi ama kurumsal.
+Abartılı vaat yok.
+“En iyi, en mükemmel, devrim yaratıyoruz” gibi yapay ifadelerden kaçın.
+Daha gerçekçi yaz:
+- “Filonuzun operasyonel yükünü azaltır.”
+- “Maliyetlerinizi daha öngörülebilir hale getirir.”
+- “Bakım, sigorta, lastik ve hasar süreçlerini tek yerden takip edin.”
+- “İhtiyacınıza göre araç, süre ve kilometre paketi belirleyin.”
+
+VERİTABANI MODELLERİ:
+Şunları Prisma schema olarak oluştur:
+User
+Account
+Session
+VerificationToken
+Company
+Vehicle
+VehicleBrand
+VehicleModel
+VehicleImage
+VehiclePackage
+QuoteRequest
+QuoteRequestItem
+FavoriteVehicle
+CompareList
+BlogPost
+BlogCategory
+FAQ
+ServicePage
+AdminNote
+Notification
+Document
+PaymentIntent
+LeadAssignment
+
+GÜVENLİK:
+- Şifre hash.
+- Rate limiting.
+- CSRF koruması.
+- Role-based access control.
+- Admin route protection.
+- Form validation: Zod.
+- Server-side validation.
+- KVKK onay kayıtları.
+- Audit log mantığı.
+- Environment variable yapısı.
+- Hatalı login deneme limiti.
+
+PERFORMANS:
+- Image optimization.
+- Lazy loading.
+- Server components kullan.
+- SEO metadata.
+- Sitemap.
+- robots.txt.
+- OpenGraph.
+- Schema.org structured data.
+- Lighthouse hedefi: 90+.
+- Accessibility hedefi: WCAG uyumlu.
+
+ÇIKTI OLARAK ŞUNLARI ÜRET:
+1. Tam ürün mimarisi.
+2. Sayfa sayfa UX açıklaması.
+3. Component listesi.
+4. Database schema.
+5. API endpoint listesi.
+6. Auth yapısı.
+7. Admin panel yapısı.
+8. Frontend dosya mimarisi.
+9. Backend dosya mimarisi.
+10. Örnek seed data.
+11. Gerçekçi Türkçe metinler.
+12. Responsive tasarım.
+13. Çalışan kod.
+14. Deploy talimatı.
+15. .env.example.
+16. Test kullanıcıları.
+17. Production’a çıkmadan önce yapılacak checklist.
+
+EN ÖNEMLİ KURAL:
+Bu site AI tarafından yapılmış gibi görünmeyecek. Her detay gerçek bir ürün ekibinin elinden çıkmış gibi olacak. Boş, generic, birbirini tekrar eden, sahte hissettiren hiçbir bölüm istemiyorum. Tasarım, metin, kod, veri modeli, kullanıcı akışı ve admin paneli gerçek hayatta kullanılabilir seviyede olmalı.
+
+MOBİL UYGULAMA ŞARTI:
+
+Web sitesi ile birlikte iOS ve Android için profesyonel mobil uygulama geliştirilecek.
+
+Teknoloji:
+- Flutter (tercihen) veya React Native
+- Tek kod tabanı
+- iOS ve Android desteği
+- App Store ve Google Play yayınlamaya hazır
+- Push notification desteği
+- Dark mode desteği
+- Çoklu dil altyapısı
+- Offline veri önbelleği
+
+AMAÇ:
+
+Mobil uygulama web sitesinin basit kopyası olmayacak.
+
+Kullanıcıların günlük işlemlerini telefon üzerinden kolayca yapabilmesi amaçlanacak.
+
+TASARIM DİLİ:
+
+- Kurumsal
+- Premium
+- Güven veren
+- Bankacılık uygulaması kalitesinde
+- Karmaşık olmayan
+- Hızlı
+- Profesyonel
+
+Abartılı animasyonlar kullanılmayacak.
+
+Kullanıcı uygulamayı açtığında ne yapacağını hemen anlayacak.
+
+------------------------------------
+GİRİŞ EKRANI
+------------------------------------
+
+- Logo
+- Hoş geldiniz mesajı
+- Email ile giriş
+- Google ile giriş
+- Apple ile giriş
+- Şifre sıfırlama
+- Kayıt ol
+
+------------------------------------
+ANA SAYFA
+------------------------------------
+
+Kullanıcının rolüne göre değişecek.
+
+Dashboard:
+
+- Aktif başvurular
+- Son teklifler
+- Bildirimler
+- Yaklaşan işlemler
+- Kısayollar
+
+Kart yapısı kullanılacak.
+
+------------------------------------
+ARAÇLAR
+------------------------------------
+
+- Araç listeleme
+- Araç filtreleme
+- Araç arama
+- Favorilere ekleme
+- Karşılaştırma
+- Teklif isteme
+
+Araç kartları mobil uyumlu olacak.
+
+------------------------------------
+ARAÇ DETAY
+------------------------------------
+
+- Galeri
+- Teknik özellikler
+- Paketler
+- Hizmetler
+- Teklif iste
+
+------------------------------------
+TEKLİFLERİM
+------------------------------------
+
+Kullanıcının:
+
+- Bekleyen teklifleri
+- Hazırlanan teklifler
+- Onaylanan teklifler
+- Reddedilen teklifler
+
+görünecek.
+
+PDF görüntüleme olacak.
+
+------------------------------------
+BAŞVURULARIM
+------------------------------------
+
+Durum takip sistemi:
+
+- Alındı
+- İnceleniyor
+- Evrak bekleniyor
+- Teklif hazırlandı
+- Sözleşme aşaması
+- Teslimat planlandı
+- Tamamlandı
+
+Timeline görünümü kullanılacak.
+
+------------------------------------
+BİLDİRİMLER
+------------------------------------
+
+Push notification sistemi:
+
+- Teklif hazırlandı
+- Evrak eksik
+- Teslimat tarihi oluştu
+- Bakım zamanı geldi
+- Muayene yaklaşıyor
+- Sigorta yenileme zamanı
+
+------------------------------------
+MESAJLAR
+------------------------------------
+
+Şirket ile kullanıcı arasında mesajlaşma.
+
+Özellikler:
+
+- Dosya gönderme
+- Evrak gönderme
+- PDF paylaşma
+- Görsel gönderme
+
+Tüm konuşmalar kayıt altında tutulacak.
+
+------------------------------------
+PROFİL
+------------------------------------
+
+- Kişisel bilgiler
+- Firma bilgileri
+- Şifre değiştirme
+- Bildirim ayarları
+- KVKK tercihleri
+- Hesap güvenliği
+
+------------------------------------
+KURUMSAL MÜŞTERİ MODÜLÜ
+------------------------------------
+
+Eğer kullanıcı aktif filo müşterisiyse:
+
+Araçlarım:
+
+- Araç listesi
+- Sürücü bilgileri
+- Sözleşme bilgileri
+- Yaklaşan işlemler
+
+Bakım Yönetimi:
+
+- Yaklaşan bakımlar
+- Geçmiş bakımlar
+- Servis kayıtları
+
+Lastik Yönetimi:
+
+- Değişim tarihleri
+- Lastik durumu
+
+Hasar Yönetimi:
+
+- Hasar bildirimi oluştur
+- Fotoğraf yükle
+- Süreç takibi
+
+Belgeler:
+
+- Sözleşmeler
+- Faturalar
+- Teslim tutanakları
+- Sigorta poliçeleri
+
+------------------------------------
+ARAÇ TESLİM MODÜLÜ
+------------------------------------
+
+Araç tesliminde mobil uygulama kullanılacak.
+
+Teslim ekranı:
+
+- Araç bilgileri
+- Kullanıcı bilgileri
+- Kilometre
+- Yakıt seviyesi
+- Hasar kontrol listesi
+- Fotoğraf çekme
+- İmza alma
+- GPS konumu
+
+Teslim tamamlandığında:
+
+- PDF teslim tutanağı oluştur
+- Sisteme kaydet
+- Kullanıcıya gönder
+
+------------------------------------
+OPERASYON EKİBİ UYGULAMASI
+------------------------------------
+
+Operasyon personeli için ayrı yetki sistemi.
+
+Görebilecekleri:
+
+- Günlük teslimatlar
+- Günlük araç iadeleri
+- Bekleyen işlemler
+- Rota planları
+- Araç durumları
+- Evrak kontrol listeleri
+
+------------------------------------
+GÜVENLİK
+------------------------------------
+
+- Biometric login
+- Face ID
+- Touch ID
+- JWT güvenliği
+- Refresh token sistemi
+- Device management
+- Şüpheli giriş tespiti
+
+------------------------------------
+PERFORMANS
+------------------------------------
+
+- 60 FPS hedefi
+- Düşük internet hızında çalışma
+- Görsel önbellekleme
+- API cache sistemi
+- Hızlı açılış süresi
+
+------------------------------------
+ÇIKTI
+------------------------------------
+
+Oluşturulacak çıktılar:
+
+1. Flutter proje mimarisi
+2. Ekran listesi
+3. Widget yapısı
+4. State management yapısı
+5. API entegrasyonları
+6. Navigation yapısı
+7. Push notification sistemi
+8. Auth sistemi
+9. Offline çalışma stratejisi
+10. App Store ve Google Play yayın hazırlığı
+
+Mobil uygulama tasarımı gerçek bir kurumsal ürün seviyesinde olmalı. Dribbble şovu gibi değil, her gün kullanılan profesyonel bir iş uygulaması gibi tasarlanmalı.
+
+
+
+
+

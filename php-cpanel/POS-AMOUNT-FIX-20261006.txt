@@ -1,0 +1,43 @@
+KAPTAS - VakifBank callback amount fix - 2026-10-06
+
+Install AFTER KAPTAS-OTOMATIK-ODEME-KONTROL-20261006.zip.
+Back up these existing files first:
+  /home/kap1e2renonline/app/Services/VakifBank.php
+  /home/kap1e2renonline/app/Controllers/PaymentController.php
+
+Upload this ZIP to /home/kap1e2renonline and extract into that same folder.
+Replace matching files; do not delete app or public_html.
+No database import, migration, config, password or payment environment change.
+
+Fix:
+PurchAmount integer callbacks use minor units (kurus). The old code multiplied
+them by 100 again. The callback parser now treats an integer as minor units
+and an explicit two-decimal value as major units. For example, 1253621 and
+12536.21 both represent 12536.21 TRY. No guessing based on expected amount.
+All other quote/enrollment/Search amount conversions retain their semantics.
+
+References:
+Official bank integration v2.4, printed page 24 / PDF page 25:
+https://vbassets.vakifbank.com.tr/ticari/pos-uye-is-yeri-hizmetleri/vakifbank-sanal-pos-entegrasyon-dokumani-2.4-versiyon.pdf
+User-provided Standard API v1.3 guide page 28 describes hash decimal stripping.
+
+Security retained:
+- Exact transaction ID, merchant ID, currency and expected amount equality.
+- Constant-time bank hash verification and authenticated 3D requirements.
+- No additional Sale attempt, forced success or manual DB state change.
+- Safe field-specific diagnostics for test callbacks only, no raw card/hash data.
+
+Retest:
+Use a NEW sandbox checkout after deployment. Old rejected callback records
+are not replayed, recharged or changed by this patch. Keep test mode enabled.
+Expected eventual success is TEST_PAID / Test odemesi dogrulandi.
+If still blocked, inspect the latest state/resultCode with the existing
+read-only SQL query. Codes now distinguish CB_AMOUNT_MISMATCH,
+CB_TRANSACTION_MISMATCH, CB_MERCHANT_MISMATCH and CB_CURRENCY_MISMATCH.
+CB_SIGNATURE_INVALID indicates a separate signature mismatch, not success.
+
+Verification limits:
+Added offline regression cases in tests/vakifbank-callback-amount.php and
+tests/callback-diagnostics.php. Local PHP execution remains blocked by
+antivirus, so these tests have NOT been executed. No antivirus bypass used.
+No bank request or actual payment was sent while preparing this patch.

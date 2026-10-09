@@ -1,0 +1,87 @@
+.exchange-rates {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 36px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #e6e3d7;
+  border-radius: 5px;
+  background: #fffdf5;
+  color: #30302e;
+  white-space: nowrap;
+}
+
+.exchange-title,
+.exchange-rate {
+  display: inline-flex;
+  align-items: center;
+}
+
+.exchange-title {
+  gap: 0.3rem;
+  color: #77725f;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.exchange-title i {
+  color: #aa8300;
+  font-size: 1rem;
+}
+
+.exchange-rate {
+  gap: 0.35rem;
+  padding-inline-start: 0.7rem;
+  border-inline-start: 1px solid #e2decf;
+  font-size: 0.78rem;
+}
+
+.exchange-rate strong {
+  color: #77725f;
+  font-size: 0.68rem;
+}
+
+.exchange-rate b {
+  color: #222;
+  letter-spacing: 0;
+}
+
+.exchange-status {
+  max-width: 130px;
+  overflow: hidden;
+  color: #77725f;
+  font-size: 0.7rem;
+  text-overflow: ellipsis;
+}
+
+.exchange-rates-mobile {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .exchange-title {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .exchange-rates-mobile {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 2rem);
+    margin: 0.75rem 1rem;
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
+
+  .exchange-rates-mobile .exchange-title,
+  .exchange-rates-mobile .exchange-rate {
+    display: inline-flex;
+    color: #e3e3e3;
+  }
+
+  .exchange-rates-mobile .exchange-rate b {
+    color: #fff;
+  }
+}

@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `PhpVposAttempt` (
+    `paymentId` VARCHAR(191) NOT NULL PRIMARY KEY,
+    `reservationId` VARCHAR(191) NOT NULL,
+    `transactionId` CHAR(32) NOT NULL,
+    `environment` VARCHAR(10) NOT NULL,
+    `merchantId` VARCHAR(32) NOT NULL,
+    `terminalNo` VARCHAR(32) NOT NULL,
+    `state` VARCHAR(24) NOT NULL DEFAULT 'ENROLLING',
+    `returnTokenHash` CHAR(64) NOT NULL,
+    `expiresAt` DATETIME(3) NOT NULL,
+    `consumedAt` DATETIME(3) NULL,
+    `clientIp` VARCHAR(45) NOT NULL,
+    `snapshot` LONGTEXT NOT NULL,
+    `resultCode` VARCHAR(32) NULL,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    UNIQUE INDEX `PhpVposAttempt_transaction_idx` (`transactionId`),
+    INDEX `PhpVposAttempt_reconcile_idx` (`state`, `updatedAt`),
+    INDEX `PhpVposAttempt_reservation_idx` (`reservationId`)
+) ENGINE=InnoDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

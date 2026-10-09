@@ -1,0 +1,233 @@
+.footer {
+  background-color: #212529;
+  color: #adb5bd;
+  padding-top: 4rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(150px, 0.8fr) minmax(210px, 1fr) minmax(220px, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer-logo {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 71px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.footer-logo img {
+  position: absolute;
+  top: -81px;
+  left: -37px;
+  display: block;
+  width: 375px;
+  height: 250px;
+  max-width: none;
+}
+
+.footer-brand p {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-brand .footer-company-name {
+  max-width: 360px;
+  margin: 0;
+  color: #d5d8da;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.footer h4 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.footer-links ul, .footer-contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links a {
+  transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-contact .footer-address {
+  align-items: flex-start;
+}
+
+.footer-address address {
+  max-width: 260px;
+  color: inherit;
+  font-size: 0.86rem;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.footer-contact i {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.footer-contact a {
+  color: inherit;
+  overflow-wrap: anywhere;
+  transition: color var(--transition-speed);
+}
+
+.footer-contact a[href^='tel:'] {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.footer-contact a:hover {
+  color: var(--primary-color);
+}
+
+.footer-payment-wrap {
+  padding-bottom: 28px;
+}
+
+.footer-payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 92px;
+  padding: 18px 24px;
+  border: 1px solid #3a3f44;
+  border-radius: 4px;
+  background: #212529;
+  color: #fff;
+}
+
+.footer-payment-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.footer-payment-copy strong {
+  font-size: 0.95rem;
+}
+
+.footer-payment-copy span {
+  max-width: 540px;
+  color: #adb5bd;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.footer-payment-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  flex: 0 0 auto;
+}
+
+.payment-logo {
+  display: block;
+  max-width: none;
+  object-fit: contain;
+}
+
+.visa-logo {
+  width: 68px;
+  height: 28px;
+}
+
+.mastercard-logo {
+  width: 48px;
+  height: 30px;
+}
+
+.footer-bottom {
+  background-color: #1a1d20;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-privacy-note {
+  color: #8f969d;
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-contact li {
+    justify-content: center;
+  }
+
+  .footer-logo {
+    width: 240px;
+    height: 57px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .footer-logo img {
+    top: -64px;
+    left: -29px;
+    width: 300px;
+    height: 200px;
+  }
+
+  .footer-bottom .container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .footer-payment {
+    display: grid;
+    justify-items: center;
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  .footer-payment-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
